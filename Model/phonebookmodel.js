@@ -7,9 +7,11 @@ const phonebookschema=new Schema({
 _id:mongoose.Schema.Types.ObjectId,
 UserDetals:{type:mongoose.Schema.Types.ObjectId,ref:'user',required:true},
 contactumber:{type:String,required:true},
-contactDiscription:{type:String,required:true}
+contactDiscription:{type:String,required:true},
+ContactType:{type:mongoose.Schema.Types.ObjectId,ref:'role',required:true},
+Createtime:{type:Date,default:Date.now()}
 })
  
-const phonebook=mongoose.model('phonebook',phonebookschema)
+const phonebooks=mongoose.model('phonebooks',phonebookschema)
 
-module.exports={phonebook}
+module.exports={phonebooks}
