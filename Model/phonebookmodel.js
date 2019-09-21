@@ -9,7 +9,7 @@ UserDetals:{type:mongoose.Schema.Types.ObjectId,ref:'user',required:true},
 contactumber:{type:String,required:true},
 contactDiscription:{type:String,required:true},
 ContactType:{type:mongoose.Schema.Types.ObjectId,ref:'role',required:true},
-Createtime:{type:Date,default:Date.now()}
+Createtime:{type:Date,default:Date.now() }
 })
  
 const phonebooks=mongoose.model('phonebooks',phonebookschema)
